@@ -15,7 +15,7 @@ class AbstractMelonOrder(): # parent class, child classes inherit everything her
         self.shipped = False
 
     def get_base_price(self):
-        """get a new base price randomly"""
+        """get a new base price randomly for splurge pricing"""
         base_price = random.randrange(5, 10)
 
         return base_price
@@ -25,7 +25,7 @@ class AbstractMelonOrder(): # parent class, child classes inherit everything her
         """Calculate price, including tax."""
 
         base_price = self.get_base_price()
-        
+
         if self.species == "christmas melon":
             base_price = base_price * 1.5
    
